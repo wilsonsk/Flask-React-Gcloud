@@ -22,6 +22,8 @@ You'll need python 2.7 and [pip 1.4 or later](http://www.pip-installer.org/en/la
    ```
    webpack --watch
    hit ctrl-c after
+   npm install --save react react-dom
+   npm install --save prop-types
    ```
    from comand line so that you can `require` your components and compile .jsx files to .js.
    
