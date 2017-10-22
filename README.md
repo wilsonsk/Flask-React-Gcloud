@@ -25,13 +25,21 @@ You'll need python 2.7 and [pip 1.4 or later](http://www.pip-installer.org/en/la
    npm install --save react react-dom
    npm install --save prop-types
    ```
-5. Webpack --watch enables automatic updating of the webpack output file to bypass manual invocation
+5. Webpack parts and merge for a degree of abstraction, you can define webpack.config.js for higher level configuration and webpack.parts.js for configuration parts to consume
+   ```
+   npm install webpack-merge --save-dev
+   ```
+6. CSS Loader and Style-loader enables CSS updating without full browser refresh
+   ```
+   npm install css-loader style-loader --save-dev
+   ```
+7. Webpack --watch enables automatic updating of the webpack output file to bypass manual invocation
    ```
    webpack --watch
    hit ctrl-c after
    ```
    
-6. Run local server from the command line:
+8. Run local server from the command line:
 
    ```
    dev_appserver.py .
