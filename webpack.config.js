@@ -10,6 +10,15 @@ module.exports = {
     filename: "app.min.js"
   },
   module: {
+    rules: [
+      {
+        test: /\.css$/,
+
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+  module: {
     loaders: [
       {
         test: /\.jsx?$/,
