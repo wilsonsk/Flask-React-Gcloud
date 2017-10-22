@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./static/js/index.js",
+  entry: "./static/js/index.jsx",
   output: {
     path: __dirname + "/static/js",
     filename: "app.min.js"
@@ -14,7 +14,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: "babel", // 'babel-loader' is also a legal name to reference
+        loader: "babel-loader", // 'babel-loader' is also a legal name to reference
         query: {
           presets: ['react', 'es2015']
         }
