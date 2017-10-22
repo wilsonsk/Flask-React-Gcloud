@@ -1,3 +1,5 @@
+## This is project aims at establishing a template that most closely resembles the industry standard in regards to configuring the stack and the application of Webpack and modularization (such as CSS modules) to take advantage of the single page nature of Reactjs as intended. 
+
 ## A skeleton for building Python applications on Google App Engine with [Flask](http://flask.pocoo.org), [React](https://facebook.github.io/react/), [Webpack](https://webpack.github.io/) and [Babel](https://babeljs.io/).
 
 ## Run Locally
@@ -18,17 +20,18 @@ You'll need python 2.7 and [pip 1.4 or later](http://www.pip-installer.org/en/la
    npm install
    ```
    
-5. Run 
+4. React-Dom and React create local modules (instead of using CDN) 
+   ```
+   npm install --save react react-dom
+   npm install --save prop-types
+   ```
+5. Webpack --watch enables automatic updating of the webpack output file to bypass manual invocation
    ```
    webpack --watch
    hit ctrl-c after
-   npm install --save react react-dom
-   npm install --save prop-types
-   npm install --save-dev babel-preset-stage-2
    ```
-   from comand line so that you can `require` your components and compile .jsx files to .js.
    
-4. Run local server from the command line:
+6. Run local server from the command line:
 
    ```
    dev_appserver.py .
