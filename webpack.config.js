@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./static/js/app.jsx",
+  entry: "./static/js/index.js",
   output: {
     path: __dirname + "/static/js",
     filename: "app.min.js"
