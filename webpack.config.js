@@ -1,20 +1,19 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./src/js/index.jsx",
   output: {
-    path: __dirname + "/src/js",
-    filename: "app.min.js"
+    path: "./src/js",
+    filename: "app.min.js",
   },
   module: {
     rules: [
       {
-        test: /\.css$/,
-
         use: ['style-loader', 'css-loader'],
+        test: /\.css$/
       },
     ],
   },
